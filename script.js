@@ -24,6 +24,56 @@
 
 
 
+// scroll countdown numbers
+function startCountdownAnimation(id, finalValue) {
+  const element = document.getElementById(id);
+  const span = element.querySelector("span");
+
+  finalValue = finalValue.toString().padStart(2, "0");
+  const finalNumber = parseInt(finalValue); // Final target number
+  let currentNumber = 0; // Start from 0
+  const intervalSpeed = 50; // Base speed for each increment
+
+  // Animate each number independently
+  const interval = setInterval(() => {
+      currentNumber++;
+      const formattedNumber = currentNumber.toString().padStart(2, "0");
+      span.textContent = formattedNumber; // Update the number display
+
+      // Stop when the number reaches its target
+      if (currentNumber === finalNumber) {
+          clearInterval(interval);
+      }
+  }, intervalSpeed);
+}
+
+// Initialize the countdown with independent timing for each value
+function initializeCountdown() {
+  const now = new Date();
+  const targetDate = new Date("2025-01-31T23:59:59"); // Replace with your target date
+  const diff = targetDate - now;
+
+  if (diff > 0) {
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      // Animate each number independently
+      startCountdownAnimation("days", days);
+      startCountdownAnimation("hours", hours);
+      startCountdownAnimation("minutes", minutes);
+      startCountdownAnimation("seconds", seconds);
+  }
+}
+window.onload = initializeCountdown;
+
+
+
+
+
+
+
 
 
 // Events table functioning

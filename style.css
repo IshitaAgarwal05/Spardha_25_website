@@ -52,16 +52,44 @@ body, html {
     font-family: 'Arial', sans-serif;
 }
 
+@keyframes vertical-scroll {
+  from {
+      transform: translateY(0);
+  }
+  to {
+      transform: translateY(-100%);
+  }
+}
+
 .count {
-    font-size: 50px;
-    font-weight: bold;
+  font-size: 50px;
+  font-weight: bold;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1em; /* Height of a single digit */
+  position: relative;
+}
+
+.count span {
+  display: inline-block;
+  transform: translateY(0); /* Starting position */
+  transition: transform 0.1s ease-in-out; /* Adjust duration to match JavaScript */
 }
 
 .label {
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: block;
-    margin-top: 5px;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  display: block;
+}
+
+.stop-animation {
+  animation: none !important; /* Stop the animation when the final value is set */
 }
 
 h1 {
