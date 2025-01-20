@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SPARDHA '25</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#Events" class="w3-button w3-block w3-black">EVENTS</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">REGISTER</a>
+    </div>
+  </div> 
+</div>
+
+
+
+
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="header-logo-container">
+    <img src="assets/images_main/jklu_logo.png" alt="JKLU Logo">
+    <img src="assets/images_main/spardha_logo.png" alt="Spardha Logo">
+  </div>
+
+  <!-- Countdown Timer -->
+  <div class="countdown-container w3-center w3-text-white">
+    <h1>SPARDHA '25</h1>
+    <div class="countdown">
+      <div>
+        <span id="days" class="count">00</span>
+        <span class="label">DAYS</span>
+      </div>
+      <div>
+        <span id="hours" class="count">00</span>
+        <span class="label">HOURS</span>
+      </div>
+      <div>
+        <span id="minutes" class="count">00</span>
+        <span class="label">MINS</span>
+      </div>
+      <div>
+        <span id="seconds" class="count">00</span>
+        <span class="label">SECS</span>
+      </div>
+    </div>
+  </div> 
+
+  <!-- <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Open from 6am to 5pm</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">SPARDHA'25</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">15 Adr street, 5015</span>
+  </div> -->
+</header>
+
+
+
+
+
+<div class="register-now-banner">
+  <div class="scroll-text"><a href="#where" class="w3-button w3-block w3-black">
+    • REGISTER NOW • REGISTER NOW • REGISTER NOW • REGISTER NOW • REGISTER NOW • REGISTER NOW • REGISTER NOW • REGISTER NOW •
+  </a></div>
+</div>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT SPARDHA '25</span></h5>
+    <p>Spardha, JKLU’s annual Sports Festival is a three-day event. The gala occasion is witness to an eclectic display of sportsmanship and team spirit where students from across the country come together to participate in sports competitions held on campus.</p>
+    <p>Since 2013, Spardha is celebrated annually. The three-day event oversees a number of outdoor and indoor sports competitions that include cricket, football, basketball, volleyball, kabaddi, cross fit, and athletics held on the campus that bring out the sportsmanship and team spirit of the students. We will have students from over 30 colleges, spread over 15 states, participating in 11 different sporting events.</p>
+    <p>This year’s Spardha promises to be the biggest yet, with a spectacular lineup of sports and activities for participants from all over India. In addition to the competitive tournaments, Spardha will also feature a range of cultural activities, including live music and dance performances, as well as a variety of fun games and activities for the whole family to enjoy.</p>
+   
+    <!-- <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+      <p>Chef, Coffeeist and Owner: Liam Brown</p>
+    </div> -->
+    <!-- <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top"> -->
+
+    <p><strong>Date:</strong> 21-23 February, 2025.</p>
+    <p><strong>Venue:</strong> JK Lakshmipat University, Near Mahindra SEZ, P.O. Mahapura Ajmer Road, Jaipur – 302 026, Rajasthan, India.</p>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Events Container -->
+<div class="w3-container" id="Events">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">EVENTS</span></h5>
+
+    <div class="tablinks-container">
+      <div onclick="openEvents(event, 'Flagship');" id="myLink" class="tablink">Flagship</div>
+      <div onclick="openEvents(event, 'Open');" class="tablink">Open</div>
+      <div onclick="openEvents(event, 'E-Sports');" class="tablink">E-Sports</div>
+    </div>    
+
+    <div id="Flagship" class="w3-container Events w3-padding-48 w3-card">
+      <h5>Cricket</h5>
+      <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+    
+      <h5>Volleyball</h5>
+      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
+    
+      <h5>Badminton</h5>
+      <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
+    
+      <h5>Basketball</h5>
+      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+
+      <h5>Football</h5>
+      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+    
+    </div>
+
+    <div id="Open" class="w3-container Events w3-padding-48 w3-card">
+      <h5>Kabaddi</h5>
+      <p class="w3-text-grey">Regular coffee 2.50</p><br>
+    
+      <h5>Crossfit</h5>
+      <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
+    
+      <h5>Athletics</h5>
+      <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
+    
+      <h5>Chess</h5>
+      <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
+    
+    </div>  
+
+    <div id="E-Sports" class="w3-container Events w3-padding-48 w3-card">
+      <h5>BGMI</h5>
+      <p class="w3-text-grey">Regular coffee 2.50</p><br>
+    
+      <h5>Smash Karts</h5>
+      <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
+    
+      <h5>Fall Guys</h5>
+      <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
+      
+    </div>  
+    
+    <!-- Button to open the rulebook -->
+    <div class="w3-center" style="padding-top: 20px; padding-bottom: 20px;">
+      <button class="w3-button w3-orange w3-round" onclick="openRulebook()"><strong>Rulebook</strong></button>
+    </div>
+
+    <img src="assets/images_main/bg_2.jpg" style="width:100%;max-width:1000px;margin-top:30px; padding-bottom: 50px;">   
+  </div>
+</div>
+
+
+
+
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <!-- <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p> -->
+    <p><h3><strong>Register Now!</strong></h3></p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="tel" placeholder="Phone Number" required name="Contact"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email Address" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="University Name" required name="College"></p>
+      <!-- <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="State" required name="State"></p> -->
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="City" required name="City"></p> 
+      <!-- <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Domain" required name="Domain"></p>--->
+
+      <div>
+        <select class="w3-input w3-padding-16 w3-border" required>
+            <option value="">Domain</option>
+            <option value="1">Flagship</option>
+            <option value="2">Open</option>
+            <option value="3">E-Sports</option>
+        </select>
+      </div>
+      <p><button class="w3-button w3-black" type="submit">SUBMIT</button></p> 
+    </form>
+
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+    
+    <p>Find Us on Google Maps</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d445.015249954718!2d75.650107!3d26.8360717!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4af4fe68f403%3A0x3bf05f95df22b8c4!2sJK%20Lakshmipat%20University!5e0!3m2!1sen!2sin!4v1736832523274!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<section class="sponsors-section">
+  <h2>Our Sponsors</h2>
+  <div class="sponsors-slider">
+    <div class="sponsor-track">
+      <!-- Add sponsor logos here -->
+      <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 1"></div>
+      <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 2"></div>
+      <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 3"></div>
+      <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 4"></div>
+      <!-- Repeat sponsors to create an infinite loop -->
+      <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 1"></div>
+      <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 2"></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="meet-the-team">
+  <h2>Meet the Team</h2>
+  
+  <!-- Organising Core -->
+  <div class="team-section">
+    <h3>Organising Core</h3>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="member1.jpg" alt="Member 1">
+        <h4>Divyansh Sharma</h4>
+        <p>Organising Head</p>
+      </div>
+      <div class="team-card">
+        <img src="member2.jpg" alt="Member 2">
+        <h4>Ishaan Saraswat</h4>
+        <p>Organising Head</p>
+      </div>
+      <div class="team-card">
+        <img src="member2.jpg" alt="Member 2">
+        <h4>Jane Smith</h4>
+        <p>Organising Head</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sports Council -->
+  <div class="team-section">
+    <h3>Sports Council</h3>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="member3.jpg" alt="Member 3">
+        <h4>Michael Brown</h4>
+        <p>Sports Head</p>
+      </div>
+      <div class="team-card">
+        <img src="member4.jpg" alt="Member 4">
+        <h4>Emily Davis</h4>
+        <p>Sports Coordinator</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Registration Team -->
+  <div class="team-section">
+    <h3>Registration Team</h3>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="member5.jpg" alt="Member 5">
+        <h4>Chris Wilson</h4>
+        <p>Registration Lead</p>
+      </div>
+      <div class="team-card">
+        <img src="member6.jpg" alt="Member 6">
+        <h4>Sarah Johnson</h4>
+        <p>Registration Member</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sponsorship Team -->
+  <div class="team-section">
+    <h3>Sponsorship Team</h3>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="member7.jpg" alt="Member 7">
+        <h4>David Clark</h4>
+        <p>Sponsorship Lead</p>
+      </div>
+      <div class="team-card">
+        <img src="member8.jpg" alt="Member 8">
+        <h4>Linda Martinez</h4>
+        <p>Sponsorship Member</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sports Cores -->
+  <div class="team-section">
+    <h3>Sports Cores</h3>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="member9.jpg" alt="Member 9">
+        <h4>John Roe</h4>
+        <p>Cricket Core</p>
+      </div>
+      <div class="team-card">
+        <img src="member10.jpg" alt="Member 10">
+        <h4>Jane Doe</h4>
+        <p>Football Core</p>
+      </div>
+      <div class="team-card">
+        <img src="member10.jpg" alt="Member 10">
+        <h4>Jane Doe</h4>
+        <p>Volleyball Core</p>
+      </div>
+      <div class="team-card">
+        <img src="member10.jpg" alt="Member 10">
+        <h4>Jane Doe</h4>
+        <p>Basketball Core</p>
+      </div>
+      <div class="team-card">
+        <img src="member10.jpg" alt="Member 10">
+        <h4>Jane Doe</h4>
+        <p>Badminton Core</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Other Cores -->
+  <div class="team-section">
+    <h3>Other Cores</h3>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="member11.jpg" alt="Member 11">
+        <h4>Ishita Agarwal</h4>
+        <p>Technical Core</p>
+      </div>
+      <div class="team-card">
+        <img src="member12.jpg" alt="Member 12">
+        <h4>Anna White</h4>
+        <p>Media Core</p>
+      </div>
+      <div class="team-card">
+        <img src="member12.jpg" alt="Member 12">
+        <h4>Anna White</h4>
+        <p>Photography Core</p>
+      </div>
+      <div class="team-card">
+        <img src="member12.jpg" alt="Member 12">
+        <h4>Anna White</h4>
+        <p>Hospitality Core</p>
+      </div>
+      <div class="team-card">
+        <img src="member12.jpg" alt="Member 12">
+        <h4>Anna White</h4>
+        <p>Discipline Core</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Left Section -->
+    <div class="footer-left">
+      <p><strong>CONTACT US</strong> 
+      <br>Vaibhav Topiwala: +91 7976600291
+      <br>Divyansh Sharma: +91 9462797442
+      <br>Ishaan Saraswat: +91 9772134536
+      <br>Akash Saraswat: +91 7014648718</p>
+      <p><strong>ADDRESS</strong><br>
+      JK Lakshmipat University, Near Mahindra SEZ, P.O. Mahapura Ajmer Road, Jaipur – 302 026, Rajasthan, India.</p>
+    </div>
+
+    <!-- Center Section -->
+    <div class="footer-center">
+      <img src="assets/images_main/combined_logo.png">
+    </div>
+
+    <!-- Right Section -->
+    <div class="footer-right">
+      <p><strong>SOCIAL HANDLES</strong><br>
+      <a href="https://www.instagram.com/spardhajklu/" title="spardhajklu" target="_blank" class="w3-hover-text-green">spardhajklu</a><br>
+      <a href="spardha@jklu.edu.in" title="spardha@jklu.edu.in" target="_blank" class="w3-hover-text-green">spardha@jklu.edu.in</a></p>
+      <br>
+      <p>Copyright © 2025 Spardha <br> Made by <a href="https://github.com/IshitaAgarwal05" title="IshitaAgarwal05" target="_blank" class="w3-hover-text-green">Ishita Agarwal</a></p>
+    </div>
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
