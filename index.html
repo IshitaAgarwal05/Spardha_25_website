@@ -66,18 +66,8 @@
           </div>
           <span class="label">SECS</span>
       </div>
-  </div>  
+    </div>  
   </div> 
-
-  <!-- <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
-    <span class="w3-tag">Open from 6am to 5pm</span>
-  </div>
-  <div class="w3-display-middle w3-center">
-    <span class="w3-text-white" style="font-size:90px">SPARDHA'25</span>
-  </div>
-  <div class="w3-display-bottomright w3-center w3-padding-large">
-    <span class="w3-text-white">15 Adr street, 5015</span>
-  </div> -->
 </header>
 
 
@@ -109,6 +99,9 @@
 
     <p><strong>Date:</strong> 21-23 February, 2025.</p>
     <p><strong>Venue:</strong> JK Lakshmipat University, Near Mahindra SEZ, P.O. Mahapura Ajmer Road, Jaipur – 302 026, Rajasthan, India.</p>
+    <div class="w3-center" style="padding-top: 20px; padding-bottom: 20px;">
+      <a href="#where"><button class="w3-button w3-orange w3-round"><strong>REGISTER</strong></button></a>
+    </div>
   </div>
 </div>
 
@@ -190,8 +183,8 @@
 <div class="w3-container" id="where" style="padding-bottom:32px;">
   <div class="w3-content" style="max-width:700px">
     <!-- <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p> -->
-    <p><h3><strong>Register Now!</strong></h3></p>
-    <form action="/action_page.php" target="_blank">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">REGISTER</span></h5>
+    <form id="registrationForm">
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="tel" placeholder="Phone Number" required name="Contact"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email Address" required name="Email"></p>
@@ -201,24 +194,46 @@
       <!-- <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Domain" required name="Domain"></p>--->
 
       <div>
-        <select class="w3-input w3-padding-16 w3-border" required>
-            <option value="">Domain</option>
-            <option value="1">Flagship</option>
-            <option value="2">Open</option>
-            <option value="3">E-Sports</option>
+        <select class="w3-input w3-padding-16 w3-border" required name="Domain" id="domain" onchange="showGameSelection()">
+          <option value="">Domain</option>
+          <option value="Flagship">Flagship</option>
+          <option value="Open">Open</option>
+          <option value="E-Sports">E-Sports</option>
         </select>
       </div>
-      <p><button class="w3-button w3-black" type="submit">SUBMIT</button></p> 
+
+      <!-- Hidden Game Selection -->
+      <div id="gameSelection" style="display: none;">
+        <select class="w3-input w3-padding-16 w3-border" required name="Game" id="game">
+            <!-- Game options will appear based on the selected domain -->
+        </select>
+      </div>
+
+      <p><button class="w3-button w3-orange w3-round" type="submit"><b>SUBMIT</b></button></p> 
     </form>
 
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
-    
+
+    <!-- Payment Section (Initially Hidden) -->
+    <div id="paymentSection" style="display: none;">
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">PAYMENT</span></h5>
+      <div class="w3-center">
+        <img src="assets/images_main/qr_code.png" alt="QR Code for Payment" id="qrCode">
+      </div>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Account Holder Name" required name="AccountHolder" id="AccountHolder"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Transaction ID" required name="TransactionID" id="transactionID"></p>
+      <p><button class="w3-button w3-orange w3-round" type="button" onclick="submitPayment()"><b>PAYMENT DONE!</b></button></p> 
+    </div>
+
+
+
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>    
     <p>Find Us on Google Maps</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d445.015249954718!2d75.650107!3d26.8360717!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4af4fe68f403%3A0x3bf05f95df22b8c4!2sJK%20Lakshmipat%20University!5e0!3m2!1sen!2sin!4v1736832523274!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div id="map-container">
+      <iframe id="map-large" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d445.015249954718!2d75.650107!3d26.8360717!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4af4fe68f403%3A0x3bf05f95df22b8c4!2sJK%20Lakshmipat%20University!5e0!3m2!1sen!2sin!4v1736832523274!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe id="map-small" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448.1257408283488!2d75.65006729329693!3d26.83659911734717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4af4fe68f403%3A0x3bf05f95df22b8c4!2sJK%20Lakshmipat%20University!5e0!3m2!1sen!2sin!4v1737557501455!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </div>
 </div>
-
-
 
 
 

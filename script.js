@@ -92,14 +92,9 @@ function openEvents(evt, eventName) {
       tablinks[i].classList.remove("active");
   }
 
-  // Display the clicked tab's content
   document.getElementById(eventName).style.display = "block";
-
-  // Add the active class to the clicked tab
   evt.currentTarget.classList.add("active");
 }
-
-// Automatically open the default tab (Flagship)
 document.getElementById("myLink").click();
 
 
@@ -160,3 +155,90 @@ function updateCountdown() {
   }
 }
 setInterval(updateCountdown, 1000);
+
+
+
+
+
+
+// Function to display game selection based on the domain chosen
+function showGameSelection() {
+  const domain = document.getElementById('domain').value;
+  const gameSelection = document.getElementById('gameSelection');
+  const gameDropdown = document.getElementById('game');
+
+  gameDropdown.innerHTML = '';
+
+  // Show relevant game options
+  if (domain === 'Flagship') {
+    gameSelection.style.display = 'block';
+    gameSelection.style.marginTop = '20px';
+    gameDropdown.innerHTML = `
+      <option value="">Select Game</option>
+      <option value="Game1">Game 1</option>
+      <option value="Game2">Game 2</option>
+    `;
+  } else if (domain === 'Open') {
+    gameSelection.style.display = 'block';
+    gameSelection.style.marginTop = '20px';
+    gameDropdown.innerHTML = `
+      <option value="">Select Game</option>
+      <option value="Game3">Game 3</option>
+      <option value="Game4">Game 4</option>
+    `;
+  } else if (domain === 'E-Sports') {
+    gameSelection.style.display = 'block';
+    gameSelection.style.marginTop = '20px';
+    gameDropdown.innerHTML = `
+      <option value="">Select Game</option>
+      <option value="Game5">Game 5</option>
+      <option value="Game6">Game 6</option>
+    `;
+  } else {
+    gameSelection.style.display = 'none';
+  }
+}
+
+  
+
+
+// Handle registration form submission
+document.getElementById('registrationForm').addEventListener('submit', function(e) {
+  e.preventDefault(); 
+  document.getElementById('paymentSection').style.display = 'block';
+  document.getElementById('qrCode').src = 'assets/images_main/qr_code.png';
+  // saveToGoogleSheet();
+});
+
+// Handle payment form submission
+function submitPayment() {
+  const transactionID = document.getElementById('transactionID').value;
+  if (transactionID) {
+    alert('Form submitted successfully!');
+    // Optionally: Save payment data to Google Sheets
+    // savePaymentToGoogleSheet(transactionID);
+  } else {
+    alert('Please fill the provided fields.');
+  }
+}
+
+
+
+
+
+// Google Maps Toggle
+function toggleMap() {
+  const largeMap = document.getElementById('map-large');
+  const smallMap = document.getElementById('map-small');
+  
+  if (window.innerWidth < 768) { // Adjust threshold as per requirement
+    largeMap.style.display = 'none';
+    smallMap.style.display = 'block';
+  } else {
+    largeMap.style.display = 'block';
+    smallMap.style.display = 'none';
+  }
+}
+
+toggleMap();
+window.addEventListener('resize', toggleMap);
