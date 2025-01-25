@@ -225,6 +225,20 @@ function submitPayment() {
 
 
 
+// Saving registered details to google sheets
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxrQzvYYDg4oOztwC6b7R7uMEVfad1pXLua7etZHsdsfQOib3mmT-wfI3oSGdaUdAKe/exec'
+const form = document.forms['registrationForm']
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+  .then(response => alert("Thank you! Your form is submitted successfully!"))
+  .then(() => {window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+
+
+
+
 
 // Google Maps Toggle
 function toggleMap() {

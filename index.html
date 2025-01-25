@@ -184,7 +184,7 @@
   <div class="w3-content" style="max-width:700px">
     <!-- <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p> -->
     <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">REGISTER</span></h5>
-    <form id="registrationForm">
+    <form method="post" id="registrationForm" name="registrationForm" 9action="">
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="tel" placeholder="Phone Number" required name="Contact"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email Address" required name="Email"></p>
@@ -215,13 +215,15 @@
 
     <!-- Payment Section (Initially Hidden) -->
     <div id="paymentSection" style="display: none;">
-      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">PAYMENT</span></h5>
-      <div class="w3-center">
-        <img src="assets/images_main/qr_code.png" alt="QR Code for Payment" id="qrCode">
-      </div>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Account Holder Name" required name="AccountHolder" id="AccountHolder"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Transaction ID" required name="TransactionID" id="transactionID"></p>
-      <p><button class="w3-button w3-orange w3-round" type="button" onclick="submitPayment()"><b>PAYMENT DONE!</b></button></p> 
+      <form method="post" id="registrationForm" name="registrationForm" action="">
+        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">PAYMENT</span></h5>
+        <div class="w3-center">
+          <img src="assets/images_main/qr_code.png" alt="QR Code for Payment" id="qrCode">
+        </div>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Account Holder Name" required name="AccountHolder" id="AccountHolder"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Transaction ID" required name="TransactionID" id="transactionID"></p>
+        <p><button class="w3-button w3-orange w3-round" type="button" onclick="submitPayment()"><b>PAYMENT DONE!</b></button></p> 
+      </form>
     </div>
 
 
@@ -267,6 +269,16 @@
   
   <!-- Organising Core -->
   <div class="team-section">
+    <h3>Sports Officer</h3>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="Vaibhav_Topiwala.jpeg" alt="Mr. Vaibhav Topiwala">
+        <h4>Mr. Vaibhav Topiwala</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="team-section">
     <h3>Organising Core</h3>
     <div class="team-grid">
       <div class="team-card">
@@ -287,36 +299,19 @@
     </div>
   </div>
 
-  <!-- Sports Council -->
-  <div class="team-section">
-    <h3>Sports Council</h3>
-    <div class="team-grid">
-      <div class="team-card">
-        <img src="member3.jpg" alt="Member 3">
-        <h4>Michael Brown</h4>
-        <p>Sports Head</p>
-      </div>
-      <div class="team-card">
-        <img src="member4.jpg" alt="Member 4">
-        <h4>Emily Davis</h4>
-        <p>Sports Coordinator</p>
-      </div>
-    </div>
-  </div>
-
   <!-- Registration Team -->
   <div class="team-section">
     <h3>Registration Team</h3>
     <div class="team-grid">
       <div class="team-card">
-        <img src="member5.jpg" alt="Member 5">
-        <h4>Chris Wilson</h4>
-        <p>Registration Lead</p>
+        <img src="assets/team/registration/rahul_verma.jpeg" alt="Member 5">
+        <h4>Rahul Verma</h4>
+        <p>Registration Core</p>
       </div>
       <div class="team-card">
-        <img src="member6.jpg" alt="Member 6">
-        <h4>Sarah Johnson</h4>
-        <p>Registration Member</p>
+        <img src="assets/team/registration/ritika_malik.jpeg" alt="Member 6">
+        <h4>Ritika Malik</h4>
+        <p>Registration Core</p>
       </div>
     </div>
   </div>
@@ -343,29 +338,40 @@
     <h3>Sports Cores</h3>
     <div class="team-grid">
       <div class="team-card">
-        <img src="member9.jpg" alt="Member 9">
-        <h4>John Roe</h4>
+        <img src="assets/team/sports/amartya_pareek.jpeg" alt="Member 12">
+        <h4>Amartya Pareek</h4>
+        <p>All Sports Core</p>
+      </div>
+      <div class="team-card">
+        <img src="assets/team/sports/naman_shukla.jpeg" alt="Member 9">
+        <h4>Naman Shukla</h4>
         <p>Cricket Core</p>
       </div>
       <div class="team-card">
-        <img src="member10.jpg" alt="Member 10">
-        <h4>Jane Doe</h4>
+        <img src="assets/team/sports/adhiraj_rathore.jpeg" alt="Member 10">
+        <h4>Adhiraj Rathore</h4>
         <p>Football Core</p>
       </div>
       <div class="team-card">
-        <img src="member10.jpg" alt="Member 10">
-        <h4>Jane Doe</h4>
+        <img src="assets/team/sports/arihant_jain.jpeg" alt="Member 10">
+        <h4>Arihant Jain</h4>
         <p>Volleyball Core</p>
       </div>
       <div class="team-card">
-        <img src="member10.jpg" alt="Member 10">
-        <h4>Jane Doe</h4>
+        <img src="assets/team/sports/lakshit_sharma.jpeg" alt="Member 10">
+        <h4>Lakshit Sharma</h4>
         <p>Basketball Core</p>
       </div>
       <div class="team-card">
-        <img src="member10.jpg" alt="Member 10">
-        <h4>Jane Doe</h4>
+        <img src="assets/team/sports/archita_bhargava.jpeg" alt="Member 10">
+        <h4>Archita Bhargava</h4>
         <p>Badminton Core</p>
+      </div>
+      <div class="team-card">
+        <img src="assets/team/sports/shubham_sharma.jpeg
+        " alt="Member 10">
+        <h4>Shubham Sharma</h4>
+        <p>E-Sports Core</p>
       </div>
     </div>
   </div>
@@ -385,19 +391,39 @@
         <p>Media Core</p>
       </div>
       <div class="team-card">
-        <img src="member12.jpg" alt="Member 12">
-        <h4>Anna White</h4>
+        <img src="assets/team/other/anirudh_saini.jpeg" alt="Member 12">
+        <h4>Anirudh Saini</h4>
         <p>Photography Core</p>
       </div>
       <div class="team-card">
-        <img src="member12.jpg" alt="Member 12">
-        <h4>Anna White</h4>
+        <img src="assets/team/other/chetesh_sharma.jpeg" alt="Member 12">
+        <h4>Chetesh Sharma</h4>
+        <p>Photography Core</p>
+      </div>
+      <div class="team-card">
+        <img src="assets/team/other/aayushi_meel.jpeg" alt="Member 12">
+        <h4>Ayushi Meel</h4>
         <p>Hospitality Core</p>
       </div>
       <div class="team-card">
-        <img src="member12.jpg" alt="Member 12">
-        <h4>Anna White</h4>
+        <img src="assets/team/other/himanshu_bansal.jpeg" alt="Member 12">
+        <h4>Himanshu Bansal</h4>
         <p>Discipline Core</p>
+      </div>
+      <div class="team-card">
+        <img src="assets/team/other/jia_soni.jpeg" alt="Member 12">
+        <h4>Jia Soni</h4>
+        <p>Stage & Venue Core</p>
+      </div>
+      <div class="team-card">
+        <img src="assets/team/other/ayushi_kabra.jpeg" alt="Member 12">
+        <h4>Ayushi Kabra</h4>
+        <p>Prize & Certificates Core</p>
+      </div>
+      <div class="team-card">
+        <img src="assets/team/other/ananya_purohit.jpeg" alt="Member 12">
+        <h4>Ananya Purohit</h4>
+        <p>Promotion Core</p>
       </div>
     </div>
   </div>
