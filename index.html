@@ -4,9 +4,15 @@
 <title>SPARDHA '25</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="rough.css">
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata"> -->
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> -->
 </head>
 <body>
 
@@ -85,25 +91,33 @@
 
 <!-- About Container -->
 <div class="w3-container" id="about">
-  <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT SPARDHA '25</span></h5>
-    <p>Spardha, JKLU’s annual Sports Festival is a three-day event. The gala occasion is witness to an eclectic display of sportsmanship and team spirit where students from across the country come together to participate in sports competitions held on campus.</p>
-    <p>Since 2013, Spardha is celebrated annually. The three-day event oversees a number of outdoor and indoor sports competitions that include cricket, football, basketball, volleyball, kabaddi, cross fit, and athletics held on the campus that bring out the sportsmanship and team spirit of the students. We will have students from over 30 colleges, spread over 15 states, participating in 11 different sporting events.</p>
-    <p>This year’s Spardha promises to be the biggest yet, with a spectacular lineup of sports and activities for participants from all over India. In addition to the competitive tournaments, Spardha will also feature a range of cultural activities, including live music and dance performances, as well as a variety of fun games and activities for the whole family to enjoy.</p>
-   
-    <!-- <div class="w3-panel w3-leftbar w3-light-grey">
-      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
-      <p>Chef, Coffeeist and Owner: Liam Brown</p>
-    </div> -->
-    <!-- <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top"> -->
-
-    <p><strong>Date:</strong> 21-23 February, 2025.</p>
-    <p><strong>Venue:</strong> JK Lakshmipat University, Near Mahindra SEZ, P.O. Mahapura Ajmer Road, Jaipur – 302 026, Rajasthan, India.</p>
-    <div class="w3-center" style="padding-top: 20px; padding-bottom: 20px;">
+  <div class="w3-content" style="max-width:1000px">
+    <h1 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT SPARDHA '25</span></h1>
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+      
+      <!-- Image container -->
+      <div style="flex: 0 0 300px; padding-top: 70px; transform: scale(1.45); padding-right: 50px;">
+          <img src="assets/images_main/media_2.jpeg" alt="Spardha Sports Event" style="width: 100%; height: auto; object-fit: cover;">
+      </div>
+      
+      <!-- Text content -->
+      <div style="flex: 1; min-width: 300px;">
+          <p>Spardha, JKLU's annual Sports Festival is a three-day event. The gala occasion is witness to an eclectic display of sportsmanship and team spirit where students from across the country come together to participate in sports competitions held on campus.</p>
+          <p>Since 2013, Spardha is celebrated annually. The three-day event oversees a number of outdoor and indoor sports competitions that include cricket, football, basketball, volleyball, kabaddi, cross fit, and athletics held on the campus that bring out the sportsmanship and team spirit of the students. We will have students from over 30 colleges, participating in 7 different sporting events.</p>
+          <p>This year's Spardha promises to be the biggest yet, with a spectacular lineup of sports and activities for participants from all over India. In addition to the competitive tournaments, Spardha will also feature a range of cultural activities, including live music and dance performances, as well as a variety of fun games and activities for the whole family to enjoy.</p>
+          
+          <p><strong>Date:</strong> 21-23 February, 2025.</p>         
+          <p><strong>Venue:</strong> JK Lakshmipat University, Near Mahindra SEZ, P.O. Mahapura Ajmer Road, Jaipur – 302 026, Rajasthan, India.</p>
+      </div>
+    </div>
+    
+    <div class="w3-center" style="padding-top: 50px; padding-bottom: 20px;">
       <a href="#where"><button class="w3-button w3-orange w3-round"><strong>REGISTER</strong></button></a>
     </div>
   </div>
 </div>
+
+
 
 
 
@@ -117,29 +131,34 @@
 
     <div class="tablinks-container">
       <div onclick="openEvents(event, 'Flagship');" id="myLink" class="tablink">Flagship</div>
-      <div onclick="openEvents(event, 'Open');" class="tablink">Open</div>
+      <!-- <div onclick="openEvents(event, 'Open');" class="tablink">Open</div> -->
       <div onclick="openEvents(event, 'E-Sports');" class="tablink">E-Sports</div>
     </div>    
 
     <div id="Flagship" class="w3-container Events w3-padding-48 w3-card">
       <h5>Cricket</h5>
-      <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+      <p class="w3-text-grey">Cricket Ground</p><br>
     
       <h5>Volleyball</h5>
-      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
+      <p class="w3-text-grey">Volleyball Court</p><br>
     
       <h5>Badminton</h5>
-      <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
+      <p class="w3-text-grey">Badminton Court</p><br>
     
       <h5>Basketball</h5>
-      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+      <p class="w3-text-grey">Basketball Court</p><br>
 
-      <h5>Football</h5>
-      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+      <h5>Futsal Football</h5>
+      <p class="w3-text-grey">Football Ground</p><br>
+
+      <h5>7-a-side Football</h5>
+      <p class="w3-text-grey">Football Ground</p><br>
     
+      <h5>Table Tennis</h5>
+      <p class="w3-text-grey">Boys Hostel - 2</p><br>
     </div>
 
-    <div id="Open" class="w3-container Events w3-padding-48 w3-card">
+    <!-- <div id="Open" class="w3-container Events w3-padding-48 w3-card">
       <h5>Kabaddi</h5>
       <p class="w3-text-grey">Regular coffee 2.50</p><br>
     
@@ -151,29 +170,59 @@
     
       <h5>Chess</h5>
       <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
-    
-    </div>  
+    </div>   -->
 
     <div id="E-Sports" class="w3-container Events w3-padding-48 w3-card">
       <h5>BGMI</h5>
-      <p class="w3-text-grey">Regular coffee 2.50</p><br>
-    
-      <h5>Smash Karts</h5>
-      <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
-    
-      <h5>Fall Guys</h5>
-      <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
-      
+      <p class="w3-text-grey">IM Amphitheatre</p><br>
     </div>  
     
     <!-- Button to open the rulebook -->
     <div class="w3-center" style="padding-top: 20px; padding-bottom: 20px;">
       <button class="w3-button w3-orange w3-round" onclick="openRulebook()"><strong>Rulebook</strong></button>
     </div>
-
-    <img src="assets/images_main/bg_2.jpg" style="width:100%;max-width:1000px;margin-top:30px; padding-bottom: 50px;">   
   </div>
 </div>
+
+
+
+
+
+
+<!-- Media Scroller -->
+<!-- <div class="gallery">
+  <div class="menu">
+    <h2>Spardha Previously</h2>
+    <div class="menu--wrapper">
+      <div class="menu--item">
+        <figure><img src="https://images.unsplash.com/photo-1595265677860-9a3168007dc0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" /></figure>
+      </div>
+
+      <div class="menu--item">
+        <figure><img src="https://images.unsplash.com/photo-1594786118579-95ba90c801ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" /></figure>
+      </div>
+
+      <div class="menu--item">
+        <figure><img src="https://images.unsplash.com/photo-1509339022327-1e1e25360a41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" /></figure>
+      </div>
+
+      <div class="menu--item">
+        <figure><img src="https://images.unsplash.com/photo-1525417071002-5ee4e6bb44f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" /></figure>
+      </div>
+
+      <div class="menu--item">
+        <figure><img src="https://images.unsplash.com/photo-1594072702031-f0e2a602dd2c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" /></figure>
+      </div>
+
+      <div class="menu--item">
+        <figure><img src="https://images.unsplash.com/photo-1592989819277-a3aafa40c66a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" /></figure>
+      </div>
+    </div>
+  </div>
+   -->
+  
+
+  
 
 
 
@@ -194,10 +243,17 @@
       <!-- <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Domain" required name="Domain"></p>--->
 
       <div>
+        <select class="w3-input w3-padding-16 w3-border" required name="Gender" id="gender" onchange="showGenderSelection()">
+          <option value="">Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      
+      <div>
         <select class="w3-input w3-padding-16 w3-border" required name="Domain" id="domain" onchange="showGameSelection()">
           <option value="">Domain</option>
           <option value="Flagship">Flagship</option>
-          <option value="Open">Open</option>
           <option value="E-Sports">E-Sports</option>
         </select>
       </div>
@@ -243,21 +299,22 @@
 
 
 
-<section class="sponsors-section">
+<!-- <section class="sponsors-section">
   <h2>Our Sponsors</h2>
   <div class="sponsors-slider">
     <div class="sponsor-track">
       <!-- Add sponsor logos here -->
-      <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 1"></div>
+      <!-- <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 1"></div>
       <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 2"></div>
       <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 3"></div>
       <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 4"></div>
+      
       <!-- Repeat sponsors to create an infinite loop -->
-      <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 1"></div>
+      <!-- <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 1"></div>
       <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 2"></div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 
@@ -272,7 +329,7 @@
     <h3>Sports Officer</h3>
     <div class="team-grid">
       <div class="team-card">
-        <img src="Vaibhav_Topiwala.jpeg" alt="Mr. Vaibhav Topiwala">
+        <img src="assets/team/OH/vaibhav_topiwala.jpeg" alt="Mr. Vaibhav Topiwala">
         <h4>Mr. Vaibhav Topiwala</h4>
       </div>
     </div>
@@ -282,53 +339,19 @@
     <h3>Organising Core</h3>
     <div class="team-grid">
       <div class="team-card">
-        <img src="member1.jpg" alt="Member 1">
+        <img src="assets/team/OH/divyansh_sharma.JPG" alt="Member 1">
         <h4>Divyansh Sharma</h4>
         <p>Organising Head</p>
       </div>
       <div class="team-card">
-        <img src="member2.jpg" alt="Member 2">
+        <img src="assets/team/OH/ishaan_saraswat.png" alt="Member 2">
         <h4>Ishaan Saraswat</h4>
         <p>Organising Head</p>
       </div>
       <div class="team-card">
-        <img src="member2.jpg" alt="Member 2">
-        <h4>Jane Smith</h4>
+        <img src="assets/team/OH/akash_saraswat.jpeg" alt="Member 2">
+        <h4>Akash Saraswat</h4>
         <p>Organising Head</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Registration Team -->
-  <div class="team-section">
-    <h3>Registration Team</h3>
-    <div class="team-grid">
-      <div class="team-card">
-        <img src="assets/team/registration/rahul_verma.jpeg" alt="Member 5">
-        <h4>Rahul Verma</h4>
-        <p>Registration Core</p>
-      </div>
-      <div class="team-card">
-        <img src="assets/team/registration/ritika_malik.jpeg" alt="Member 6">
-        <h4>Ritika Malik</h4>
-        <p>Registration Core</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Sponsorship Team -->
-  <div class="team-section">
-    <h3>Sponsorship Team</h3>
-    <div class="team-grid">
-      <div class="team-card">
-        <img src="member7.jpg" alt="Member 7">
-        <h4>David Clark</h4>
-        <p>Sponsorship Lead</p>
-      </div>
-      <div class="team-card">
-        <img src="member8.jpg" alt="Member 8">
-        <h4>Linda Martinez</h4>
-        <p>Sponsorship Member</p>
       </div>
     </div>
   </div>
@@ -348,8 +371,18 @@
         <p>Cricket Core</p>
       </div>
       <div class="team-card">
+        <img src="assets/team/sports/anant_gupta.jpeg" alt="Member 9">
+        <h4>Anant Gupta</h4>
+        <p>Cricket Core</p>
+      </div>
+      <div class="team-card">
         <img src="assets/team/sports/adhiraj_rathore.jpeg" alt="Member 10">
         <h4>Adhiraj Rathore</h4>
+        <p>Football Core</p>
+      </div>
+      <div class="team-card">
+        <img src="assets/team/sports/adhiraj_singh.jpeg" alt="Member 10">
+        <h4>Adhiraj Singh</h4>
         <p>Football Core</p>
       </div>
       <div class="team-card">
@@ -368,8 +401,12 @@
         <p>Badminton Core</p>
       </div>
       <div class="team-card">
-        <img src="assets/team/sports/shubham_sharma.jpeg
-        " alt="Member 10">
+        <img src="assets/team/sports/arshveer_singh_chauhan.jpeg" alt="Member 10">
+        <h4>Arsh Veer Singh Chauhan</h4>
+        <p>Table Tennis Core</p>
+      </div>
+      <div class="team-card">
+        <img src="assets/team/sports/shubham_sharma.jpeg" alt="Member 10">
         <h4>Shubham Sharma</h4>
         <p>E-Sports Core</p>
       </div>
@@ -380,14 +417,45 @@
   <div class="team-section">
     <h3>Other Cores</h3>
     <div class="team-grid">
+      <!-- Registration Team -->
+        <div class="team-card">
+        <img src="assets/team/registration/rahul_verma.jpeg" alt="Member 5">
+        <h4>Rahul Verma</h4>
+        <p>Registration Core</p>
+      </div>
       <div class="team-card">
-        <img src="member11.jpg" alt="Member 11">
+        <img src="assets/team/registration/ritika_malik.jpeg" alt="Member 6">
+        <h4>Ritika Malik</h4>
+        <p>Registration Core</p>
+      </div>
+    
+      <!-- Sponsorship Team -->
+      <div class="team-card">
+        <img src="assets/team/sponsorship/bharat_mohan.jpeg" alt="Member 7">
+        <h4>Bharat Mohan</h4>
+        <p>Sponsorship Core</p>
+      </div>
+
+      <!-- Promotion Team -->
+      <div class="team-card">
+        <img src="assets/team/other/ananya_purohit.jpeg" alt="Member 12">
+        <h4>Ananya Purohit</h4>
+        <p>Promotion Core</p>
+      </div>
+      <div class="team-card">
+        <img src="assets/team/other/pankaj_gupta.jpeg" alt="Member 12">
+        <h4>Pankaj Gupta</h4>
+        <p>Promotion Core</p>
+      </div>
+
+      <div class="team-card">
+        <img src="assets/team/other/ishita_agarwal.jpeg" alt="Member 11">
         <h4>Ishita Agarwal</h4>
         <p>Technical Core</p>
       </div>
       <div class="team-card">
-        <img src="member12.jpg" alt="Member 12">
-        <h4>Anna White</h4>
+        <img src="assets/team/other/prabal_agrawal.jpeg" alt="Member 12">
+        <h4>Prabal Agrawal</h4>
         <p>Media Core</p>
       </div>
       <div class="team-card">
@@ -411,6 +479,11 @@
         <p>Discipline Core</p>
       </div>
       <div class="team-card">
+        <img src="assets/team/other/divya_krishnani.jpeg" alt="Member 12">
+        <h4>Divya Krishnani</h4>
+        <p>Design Core</p>
+      </div>
+      <div class="team-card">
         <img src="assets/team/other/jia_soni.jpeg" alt="Member 12">
         <h4>Jia Soni</h4>
         <p>Stage & Venue Core</p>
@@ -419,11 +492,6 @@
         <img src="assets/team/other/ayushi_kabra.jpeg" alt="Member 12">
         <h4>Ayushi Kabra</h4>
         <p>Prize & Certificates Core</p>
-      </div>
-      <div class="team-card">
-        <img src="assets/team/other/ananya_purohit.jpeg" alt="Member 12">
-        <h4>Ananya Purohit</h4>
-        <p>Promotion Core</p>
       </div>
     </div>
   </div>
