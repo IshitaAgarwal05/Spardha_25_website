@@ -14,8 +14,38 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> -->
 </head>
-<body>
 
+
+
+
+
+
+
+<!-- Loader -->
+<div id="loader">
+  <!--cricket ball svg-->
+  <img src="https://cdn-icons-png.flaticon.com/128/1099/1099680.png" id="ball" alt="ball">
+  
+  <!--cricket bat svg-->
+  <svg id="bat" viewBox="0 0 460.84737 460.84737" xmlns="http://www.w3.org/2000/svg">
+  <path d="m460.847656 31.75-25.070312 25.078125-31.761719-31.757813 25.082031-25.070312zm0 0" fill="#a85d5d" />
+  <path d="m378.945312 50.140625 25.070313-25.070313 31.761719 31.757813-25.070313 25.070313zm0 0" fill="#7f4545" />
+  <path d="m353.878906 75.210938 25.066406-25.070313 31.761719 31.757813-25.070312 25.070312zm0 0" fill="#a85d5d" />
+  <path d="m328.808594 100.28125 25.066406-25.070312 31.761719 31.757812-25.070313 25.070312zm0 0" fill="#7f4545" />
+  <path d="m360.566406 132.039062-25.078125 25.070313-31.75-31.75 25.070313-25.078125zm0 0" fill="#a85d5d" />
+  <path d="m352.425781 190.320312-260.136719 260.140626c-13.847656 13.847656-36.296874 13.847656-50.140624 0l-31.761719-31.761719c-13.847657-13.84375-13.847657-36.296875 0-50.140625l260.140625-260.136719 25.070312 25.066406-.21875.222657-76.050781 107.808593 107.808594-76.050781.21875-.21875zm0 0" fill="#ffd2a6" />
+  <path d="m327.355469 165.25-.21875.21875-107.808594 76.050781 76.050781-107.808593.21875-.222657zm0 0" fill="#7f4545" />
+  </svg>
+  </div>
+
+
+
+
+
+
+
+
+<body>
   
 <!-- Links (sit on top) -->
 <div class="w3-top">
@@ -49,27 +79,19 @@
     <I><strong><h1>SPARDHA '25</h1></strong></I>
     <div class="countdown">
       <div>
-          <div class="count" id="days">
-              <span>00</span>
-          </div>
+          <div class="count" id="days"><span>00</span></div>
           <span class="label">DAYS</span>
       </div>
       <div>
-          <div class="count" id="hours">
-              <span>00</span>
-          </div>
+          <div class="count" id="hours"><span>00</span></div>
           <span class="label">HOURS</span>
       </div>
       <div>
-          <div class="count" id="minutes">
-              <span>00</span>
-          </div>
+          <div class="count" id="minutes"><span>00</span></div>
           <span class="label">MINS</span>
       </div>
       <div>
-          <div class="count" id="seconds">
-              <span>00</span>
-          </div>
+          <div class="count" id="seconds"><span>00</span></div>
           <span class="label">SECS</span>
       </div>
     </div>  
@@ -189,41 +211,6 @@
 
 
 
-<!-- Media Scroller -->
-<!-- <div class="gallery">
-  <div class="menu">
-    <h2>Spardha Previously</h2>
-    <div class="menu--wrapper">
-      <div class="menu--item">
-        <figure><img src="https://images.unsplash.com/photo-1595265677860-9a3168007dc0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" /></figure>
-      </div>
-
-      <div class="menu--item">
-        <figure><img src="https://images.unsplash.com/photo-1594786118579-95ba90c801ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" /></figure>
-      </div>
-
-      <div class="menu--item">
-        <figure><img src="https://images.unsplash.com/photo-1509339022327-1e1e25360a41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" /></figure>
-      </div>
-
-      <div class="menu--item">
-        <figure><img src="https://images.unsplash.com/photo-1525417071002-5ee4e6bb44f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" /></figure>
-      </div>
-
-      <div class="menu--item">
-        <figure><img src="https://images.unsplash.com/photo-1594072702031-f0e2a602dd2c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" /></figure>
-      </div>
-
-      <div class="menu--item">
-        <figure><img src="https://images.unsplash.com/photo-1592989819277-a3aafa40c66a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" /></figure>
-      </div>
-    </div>
-  </div>
-   -->
-  
-
-  
-
 
 
 
@@ -304,18 +291,67 @@
   <div class="sponsors-slider">
     <div class="sponsor-track">
       <!-- Add sponsor logos here -->
-      <!-- <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 1"></div>
-      <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 2"></div>
-      <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 3"></div>
-      <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 4"></div>
+      <!--<div class="sponsor"><img src="assets/images_main/bg_1.jpg" alt="Sponsor 1"></div>
+      <div class="sponsor"><img src="assets/images_main/bg_2.jpg" alt="Sponsor 2"></div>
+      <div class="sponsor"><img src="assets/images_main/media_2.jpeg" alt="Sponsor 3"></div>
+      <div class="sponsor"><img src="assets/images_main/media_3.jpeg" alt="Sponsor 4"></div>
       
       <!-- Repeat sponsors to create an infinite loop -->
-      <!-- <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 1"></div>
-      <div class="sponsor"><img src="assets/images_main/sponsor_1.png" alt="Sponsor 2"></div>
+      <!--<div class="sponsor"><img src="assets/images_main/media_4.jpeg" alt="Sponsor 1"></div>
+      <div class="sponsor"><img src="assets/images_main/media_5.jpeg" alt="Sponsor 2"></div>
+      <div class="sponsor"><img src="assets/images_main/media_6.jpeg" alt="Sponsor 1"></div>
+      <div class="sponsor"><img src="assets/images_main/media_7.jpeg" alt="Sponsor 2"></div>
+      <div class="sponsor"><img src="assets/images_main/media_8.jpeg" alt="Sponsor 1"></div>
+      <div class="sponsor"><img src="assets/images_main/bg_1.jpg" alt="Sponsor 2"></div>
     </div>
   </div>
 </section> -->
 
+
+
+
+
+
+
+
+
+
+
+<!-- Media Scroller -->
+<!-- <div class="gallery">
+  <h2 class="carousel-title">Spardha Previously</h2> <!-- Add a class for styling -->
+  <!-- <div class="slider">
+    <div class="slide-track">
+      <div class="slide">
+        <img src="assets/images_main/bg_1.jpg" height="400" width="500" alt="" />
+      </div>
+      <div class="slide">
+        <img src="assets/images_main/bg_2.jpg" height="400" width="500" alt="" />
+      </div>
+      <div class="slide">
+        <img src="assets/images_main/media_2.jpeg" height="400" width="500" alt="" />
+      </div>
+      <div class="slide">
+        <img src="assets/images_main/media_3.jpeg" height="400" width="500" alt="" />
+      </div>
+      <div class="slide">
+        <img src="assets/images_main/media_4.jpeg" height="400" width="500" alt="" />
+      </div>
+      <div class="slide">
+        <img src="assets/images_main/media_5.jpeg" height="400" width="500" alt="" />
+      </div>
+      <div class="slide">
+        <img src="assets/images_main/media_6.jpeg" height="400" width="500" alt="" />
+      </div>
+      <div class="slide">
+        <img src="assets/images_main/media_7.jpeg" height="400" width="500" alt="" />
+      </div>
+      <div class="slide">
+        <img src="assets/images_main/media_8.jpeg" height="400" width="500" alt="" />
+      </div>
+    </div>
+  </div>
+</div> -->
 
 
 

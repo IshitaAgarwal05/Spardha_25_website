@@ -178,147 +178,6 @@ h1 {
 
 
 
-/* Media Scroll */
-/* .gallery {
-  box-sizing: border-box;
-  height: 100vh;
-  overflow: hidden;
-  background: #000;
-  color: #fff;  
-  font-family: 'Playfair Display', cursive;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .menu {
-    overflow: hidden;
-    cursor: grab;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    height: 40vh;
-    
-    &.is-dragging {
-      cursor: grabbing;
-    }
-    
-    &--wrapper {
-      counter-reset: count;
-      display: flex;
-      position: absolute;
-      z-index: 1;
-      height: 100%;
-      top: 0;
-      left: 0;
-      width: 100%;
-    }
-    
-    &--item {
-      counter-increment: count;
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      width: 30vw;
-      height: 100%;
-      padding: 0 1.5vw;
-      overflow: hidden;
-      
-      @media (max-width: 767px) {
-        width: 40vw;
-        height: 40vw;
-      }
-      
-      &:nth-child(n+10):before {
-        content: counter(count);
-      }
-      
-      figure {
-        position: absolute;
-        z-index: 1;
-        display: block;
-        user-select: none;
-        -webkit-appearance: none;
-        padding: 0;
-        border: none;
-        outline: none;
-        box-shadow: none;
-        cursor: pointer;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        pointer-events: none;
-        transform-origin: center;
-        
-        img {
-          position: absolute;
-          z-index: 1;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          vertical-align: middle;
-          transform-origin: center;
-        }
-      
-        &:before {
-          position: absolute;
-          z-index: 2;
-          bottom: 1vw;
-          left: 1vw;
-          display: inline-block;
-          content: "0" counter(count);
-          color: #ffffff;
-          font-size: 3vw;
-        }
-      }
-    }
-  }
-
-  .version {
-    display: inline-block;
-    position: fixed;
-    text-align: center;
-    z-index: 1;
-    text-decoration: none;
-    background: #333;
-    font-family: sans-serif;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 12px;
-    border-radius: 10px;
-    box-shadow: 0 8px 10px -5px rgba(0, 0, 0, .2);
-    top: -30px;
-    right: -50px;
-    bottom: auto;
-    transform: rotate(45deg);
-    transform-origin: 0% 100%;
-    border-radius: 0;
-    padding: 8px 30px;
-    font-size: 11px;
-    
-    &:before {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      width: 100%;
-      height: 100px;
-      bottom: 0;
-      right: 0%;
-      background: transparent;
-    }
-    
-    @media (max-width: 767px) {
-      transform: scale(.6) rotate(45deg) ;
-      right: -100px;
-    }
-  }
-} */
-
-
-
-
 
 
 
@@ -582,10 +441,10 @@ h1 {
 
 
 /* Sponsors Section */
-.sponsors-section {
+/* .sponsors-section {
   background: white;
   color: black;
-  padding: 40px 20px;
+  padding: 20px 20px;
   text-align: center;
 }
 
@@ -603,13 +462,13 @@ h1 {
 
 .sponsor-track {
   display: flex;
-  transition: transform 0.3s ease-in-out;
-  width: calc(300%); /* Make it wide enough for all slides */
-}
+  transition: transform 0.1s ease-in-out;
+  width: calc(300%); Make it wide enough for all slides */
+/* }
 
 .sponsor {
   flex: 0 0 calc(100% / 10); /* Show 3 logos at a time */
-  display: flex;
+/*  display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -619,12 +478,16 @@ h1 {
   max-width: 100%;
   max-height: 100px;
   object-fit: contain;
-}
+} */
 
 /* Optional: Add space between sponsor logos */
-.sponsor:not(:last-child) {
+/* .sponsor:not(:last-child) {
   margin-right: 20px;
-}
+} */
+
+
+
+
 
 /* Meet the Team Section */
 .meet-the-team {
@@ -681,4 +544,177 @@ h1 {
   font-size: 14px;
   color: #ccc;
   margin-bottom: 10px;
+}
+
+
+
+
+
+.gallery {
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+  color: #fff;  
+  font-family: 'Playfair Display', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slider {
+  background: white;
+  /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125); */
+  height: 300px;
+  /* margin: auto; */
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slide img {
+  transform: scale(0.8);
+  margin-left: 20px;
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Loader Overlay */
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000; /* Change as per theme */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+#ball,
+#bat{
+    position: absolute;
+}
+
+#ball {
+    width: 25px;
+    height: 25px;
+    left: 46%;
+    top:  53%;
+    z-index: 2;
+    animation: bounceBall 1s infinite;
+    animation-delay: 1s;
+}
+
+#bat {
+    width: 10%;
+    /* top: 0;
+    left: 0; */
+    z-index: 1;
+    transform: rotateX(-40deg);
+    animation: moveBat 1s infinite;
+}
+
+/* bounce animation snippet from animate.css library with some changes */
+@keyframes bounceBall {
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translate3d(0, 0, 0);
+    }
+
+    40%,
+    43% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -60px, 0);
+    }
+
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -30px, 0);
+    }
+
+    90% {
+        transform: translate3d(0, -8px, 0);
+    }
+    }
+
+    @keyframes moveBat {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    33% {
+        transform: rotateX(-25deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+/* Bat Swing Animation */
+@keyframes swingBat {
+  0%, 100% {
+      transform: rotate(-10deg);
+  }
+  50% {
+      transform: rotate(10deg);
+  }
 }
