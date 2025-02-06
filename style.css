@@ -1,8 +1,10 @@
 body, html {
   height: 100%;
-  /* font-family: "Inconsolata", sans-serif; */
   background-color: black;
   margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent side-scrolling */
 }
 
 .kumar-one-regular {
@@ -10,6 +12,61 @@ body, html {
   font-weight: 400;
   font-style: normal;
 }
+
+
+
+
+
+
+
+
+/* Ensure Navbar is Fixed */
+.w3-top {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Default: Menu is Hidden */
+.w3-hide {
+  display: none;
+}
+
+/* Dropdown Menu Styling */
+#mobileMenu {
+  position: absolute;
+  top: 40px; /* Space below menu button */
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* Button Styling */
+.w3-button {
+  padding: 12px 16px;
+  font-size: 16px;
+}
+
+/* Responsive Design for Large Screens: Keep Original Layout */
+@media screen and (min-width: 515px) {
+  #mobileMenu {
+    display: flex !important; /* Ensure menu stays open on big screens */
+    justify-content: space-around;
+    position: relative;
+    top: 0;
+  }
+  
+  .w3-row {
+    display: none; /* Hide the MENU button */
+  }
+}
+
+
+
+
+
+
+
 
 .w3-button.w3-block.w3-black {
   margin-left: 2px;
@@ -122,7 +179,7 @@ h1 {
   padding-bottom: 80px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 100%) {
   #about .w3-content > div {
       flex-direction: column;
   }
@@ -174,6 +231,157 @@ h1 {
 .qrcode img {
   transform: scale(1.5);
 }
+
+
+
+
+
+
+
+
+/* About Content - Default: Side-by-Side Layout */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image Styling */
+.about-image {
+  flex: 0 0 300px; /* Fix image size */
+  max-width: 100%;
+  text-align: center; /* Ensures center alignment */
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block; /* Prevents extra spaces */
+}
+
+/* Text Styling */
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 652px) {
+  .about-content {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+  }
+
+  .about-image {
+    flex: none;
+    width: 80%; /* Make the image take 80% width */
+    padding: 0; /* Remove extra padding */
+  }
+
+  .about-image img {
+    margin: auto; /* Centers the image */
+  }
+
+  .about-text {
+    text-align: justify; /* Improve readability */
+    padding: 10px; /* Add space around text */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Gallery Container */
+.gallery {
+  display: flex;
+  flex-direction: column; /* Arrange text above carousel */
+  align-items: center; /* Center both title and slider */
+  width: 100%;
+  background: linear-gradient(135deg, #2d2a4d, #0d0d0d); /* Optional, adjust as per theme */
+}
+
+/* Title Styling */
+.carousel-title {
+  margin: 0; /* Remove margin for title */
+  padding: 20px 0; /* Add space for the title */
+  font-size: 1.5rem; /* Adjust font size */
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+/* Slider Container */
+.slider {
+  background: linear-gradient(135deg, #2d2a4d, #0d0d0d);
+  padding: 20px; /* Add padding to all sides of the carousel */
+  height: auto; /* Adjust slider height */
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding is inside the width/height */
+}
+
+.slide-track {
+  animation: scroll 80s linear infinite;
+  display: flex;
+  width: calc(250px * 14); /* Adjust width based on number of slides */
+}
+
+.slide {
+  height: 400px; /* Adjust to match image height */
+  width: 500px;  /* Adjust to match image width */
+  margin-right: 10px; /* Space between images */
+}
+
+/* Slide images */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images cover their container without stretching */
+}
+
+/* Scroll Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7)); /* Scroll based on number of slides */
+  }
+}
+
+/* Gradient Overlay for Slide */
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, rgb(86, 85, 85) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 1000px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+
 
 
 
@@ -378,11 +586,13 @@ h1 {
   text-align: center;
   padding: 10px;
   margin: 0;
+  width: 100%;
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
+  flex-direction: row; /* Default: Row layout */
   align-items: center; /* Ensures vertical alignment */
   flex-wrap: wrap;
   margin: 0 auto; /* Center the container */
@@ -411,7 +621,7 @@ h1 {
   max-height: 150px; 
   margin: 0 auto;
   display: block;
-  Transform: scale(1.75); 
+  Transform: scale(1.75);
 }
 
 .footer-right {
@@ -429,6 +639,24 @@ h1 {
   font-weight: bold;
 }
 
+@media screen and (max-width: 515px) {
+  .footer-container {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+  }
+
+  .footer-left, 
+  .footer-center, 
+  .footer-right {
+    width: 100%; /* Full width */
+  }
+
+  .footer-right {
+    padding-right: 20px; /* Remove extra right padding for mobile */
+    text-align: right; /* Center-align text */
+  }
+}
+
 
 /* Google Maps */
 #map-large {
@@ -441,10 +669,10 @@ h1 {
 
 
 /* Sponsors Section */
-/* .sponsors-section {
+.sponsors-section {
   background: white;
   color: black;
-  padding: 20px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
@@ -462,13 +690,13 @@ h1 {
 
 .sponsor-track {
   display: flex;
-  transition: transform 0.1s ease-in-out;
-  width: calc(300%); Make it wide enough for all slides */
-/* }
+  transition: transform 0.3s ease-in-out;
+  width: calc(300%); /* Make it wide enough for all slides */
+}
 
 .sponsor {
   flex: 0 0 calc(100% / 10); /* Show 3 logos at a time */
-/*  display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -478,16 +706,12 @@ h1 {
   max-width: 100%;
   max-height: 100px;
   object-fit: contain;
-} */
+}
 
 /* Optional: Add space between sponsor logos */
-/* .sponsor:not(:last-child) {
+.sponsor:not(:last-child) {
   margin-right: 20px;
-} */
-
-
-
-
+}
 
 /* Meet the Team Section */
 .meet-the-team {
@@ -545,90 +769,6 @@ h1 {
   color: #ccc;
   margin-bottom: 10px;
 }
-
-
-
-
-
-.gallery {
-  height: 100vh;
-  overflow: hidden;
-  background: #000;
-  color: #fff;  
-  font-family: 'Playfair Display', cursive;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 7));
-  }
-}
-
-.slider {
-  background: white;
-  /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125); */
-  height: 300px;
-  /* margin: auto; */
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.slide img {
-  transform: scale(0.8);
-  margin-left: 20px;
-}
-
-.slider::before,
-.slider::after {
-  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-  content: "";
-  height: 100px;
-  position: absolute;
-  width: 200px;
-  z-index: 2;
-}
-
-.slider::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
-}
-
-.slider::before {
-  left: 0;
-  top: 0;
-}
-
-.slider .slide-track {
-  animation: scroll 40s linear infinite;
-  display: flex;
-  width: calc(250px * 14);
-}
-
-.slider .slide {
-  height: 100px;
-  width: 250px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

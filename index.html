@@ -10,9 +10,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
-<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> -->
 </head>
 
 
@@ -36,7 +33,7 @@
   <path d="m352.425781 190.320312-260.136719 260.140626c-13.847656 13.847656-36.296874 13.847656-50.140624 0l-31.761719-31.761719c-13.847657-13.84375-13.847657-36.296875 0-50.140625l260.140625-260.136719 25.070312 25.066406-.21875.222657-76.050781 107.808593 107.808594-76.050781.21875-.21875zm0 0" fill="#ffd2a6" />
   <path d="m327.355469 165.25-.21875.21875-107.808594 76.050781 76.050781-107.808593.21875-.222657zm0 0" fill="#7f4545" />
   </svg>
-  </div>
+</div>
 
 
 
@@ -46,24 +43,24 @@
 
 
 <body>
-  
 <!-- Links (sit on top) -->
 <div class="w3-top">
   <div class="w3-row w3-padding w3-black">
+    <!-- Menu Icon for Small Screens -->
     <div class="w3-col s3">
-      <a href="#" class="w3-button w3-block w3-black">HOME</a>
-    </div>
-    <div class="w3-col s3">
-      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
-    </div>
-    <div class="w3-col s3">
-      <a href="#Events" class="w3-button w3-block w3-black">EVENTS</a>
-    </div>
-    <div class="w3-col s3">
-      <a href="#where" class="w3-button w3-block w3-black">REGISTER</a>
+      <a href="javascript:void(0);" class="w3-button w3-block w3-black" onclick="toggleMenu()">☰ MENU</a>
     </div>
   </div> 
+
+  <!-- Hidden Menu (Appears When Clicked) -->
+  <div id="mobileMenu" class="w3-black w3-hide">
+    <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    <a href="#Events" class="w3-button w3-block w3-black">EVENTS</a>
+    <a href="#where" class="w3-button w3-block w3-black">REGISTER</a>
+  </div>
 </div>
+
 
 
 
@@ -115,19 +112,19 @@
 <div class="w3-container" id="about">
   <div class="w3-content" style="max-width:1000px">
     <h1 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT SPARDHA '25</span></h1>
-    <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+    <div class="about-content">
       
       <!-- Image container -->
-      <div style="flex: 0 0 300px; padding-top: 70px; transform: scale(1.45); padding-right: 50px;">
-          <img src="assets/images_main/media_2.jpeg" alt="Spardha Sports Event" style="width: 100%; height: auto; object-fit: cover;">
+      <div class="about-image">
+          <img src="assets/images_main/media_2.jpeg" alt="Spardha Sports Event">
       </div>
       
       <!-- Text content -->
-      <div style="flex: 1; min-width: 300px;">
+      <div class="about-text">
           <p>Spardha, JKLU's annual Sports Festival is a three-day event. The gala occasion is witness to an eclectic display of sportsmanship and team spirit where students from across the country come together to participate in sports competitions held on campus.</p>
           <p>Since 2013, Spardha is celebrated annually. The three-day event oversees a number of outdoor and indoor sports competitions that include cricket, football, basketball, volleyball, kabaddi, cross fit, and athletics held on the campus that bring out the sportsmanship and team spirit of the students. We will have students from over 30 colleges, participating in 7 different sporting events.</p>
           <p>This year's Spardha promises to be the biggest yet, with a spectacular lineup of sports and activities for participants from all over India. In addition to the competitive tournaments, Spardha will also feature a range of cultural activities, including live music and dance performances, as well as a variety of fun games and activities for the whole family to enjoy.</p>
-          
+        
           <p><strong>Date:</strong> 21-23 February, 2025.</p>         
           <p><strong>Venue:</strong> JK Lakshmipat University, Near Mahindra SEZ, P.O. Mahapura Ajmer Road, Jaipur – 302 026, Rajasthan, India.</p>
       </div>
@@ -318,9 +315,9 @@
 
 
 <!-- Media Scroller -->
-<!-- <div class="gallery">
-  <h2 class="carousel-title">Spardha Previously</h2> <!-- Add a class for styling -->
-  <!-- <div class="slider">
+<div class="gallery">
+  <h2 class="carousel-title">Spardha Previously</h2> <!-- Title on top -->
+  <div class="slider">
     <div class="slide-track">
       <div class="slide">
         <img src="assets/images_main/bg_1.jpg" height="400" width="500" alt="" />
@@ -351,12 +348,16 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
 
 
 
 
+
+
+
+<!-- Meet The Team Grid -->
 <section class="meet-the-team">
   <h2>Meet the Team</h2>
   
@@ -573,7 +574,6 @@
       <p>Copyright © 2025 Spardha <br> Made by <a href="https://github.com/IshitaAgarwal05" title="IshitaAgarwal05" target="_blank" class="w3-hover-text-green">Ishita Agarwal</a></p>
     </div>
   </div>
-
 </footer>
 
 
