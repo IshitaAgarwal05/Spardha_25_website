@@ -150,40 +150,6 @@ setInterval(updateCountdown, 1000);
 
 
 
-// Function to display game selection based on the domain chosen
-function showGameSelection() {
-  const domain = document.getElementById('domain').value;
-  const gameSelection = document.getElementById('gameSelection');
-  const gameDropdown = document.getElementById('game');
-
-  gameDropdown.innerHTML = '';
-
-  // Show relevant game options
-  if (domain === 'Flagship') {
-    gameSelection.style.display = 'block';
-    gameSelection.style.marginTop = '20px';
-    gameDropdown.innerHTML = `
-      <option value="">Select Game</option>
-      <option value="Cricket">Cricket</option>
-      <option value="Volleyball">Volleyball</option>
-      <option value="Basketball">Basketball</option>
-      <option value="Futsal Football">Futsal Football</option>
-      <option value="7-a-side Football">7-a-side Football</option>
-      <option value="Badminton">Badminton</option>
-      <option value="Table Tennis">Table Tennis</option>
-    `;
-  } else if (domain === 'E-Sports') {
-    gameSelection.style.display = 'block';
-    gameSelection.style.marginTop = '20px';
-    gameDropdown.innerHTML = `
-      <option value="">Select Game</option>
-      <option value="BGMI">BGMI</option>
-    `;
-  } else {
-    gameSelection.style.display = 'none';
-  }
-}
-
 
 
 
@@ -220,17 +186,6 @@ function submitPayment() {
 
 
 
-
-// Saving registered details to google sheets
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxrQzvYYDg4oOztwC6b7R7uMEVfad1pXLua7etZHsdsfQOib3mmT-wfI3oSGdaUdAKe/exec'
-const form = document.forms['registrationForm']
-form.addEventListener('submit', (e) => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-  .then(response => alert("Thank you! Your form is submitted successfully!"))
-  // .then(() => {window.location.reload(); })
-  .catch(error => console.error('Error!', error.message))
-})
 
 
 

@@ -10,11 +10,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
+
+<!-- Mail script -->
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "CfZRKtZVc0S7ZWH9-",
+      });
+   })();
+</script>
+
+<script src="Contact_form.js"></script>
+<script src="gsheets.js"></script>
+
 </head>
 
 
 
-
+  
 
 
 
@@ -221,70 +237,85 @@
 
 
 
-<!-- Contact/Area Container -->
+
+<!-- contact form -->
 <div class="w3-container" id="where" style="padding-bottom:32px;">
   <div class="w3-content" style="max-width:700px">
-    <!-- <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p> -->
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">REGISTER</span></h5>
-    <form method="post" id="registrationForm" name="registrationForm" 9action="">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="tel" placeholder="Phone Number" required name="Contact"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email Address" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="University Name" required name="College"></p>
-      <!-- <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="State" required name="State"></p> -->
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="City" required name="City"></p> 
-      <!-- <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Domain" required name="Domain"></p>--->
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">REGISTER</span></h5>
+  <form method="post" action="https://script.google.com/macros/s/AKfycbxjPZay5ijjfNrbPeHGjCscaTUEiQzKzPaAfb6G4DMUqQjqzQoajuTDohwYlR9NA6Yx/exec" name="contactform" id="contactform">
+    <h4>Contact Us</h4>
+    <input class="w3-input w3-padding-16 w3-border" type="text" name="name" placeholder="Name" id="name">
+    <input class="w3-input w3-padding-16 w3-border" type="text" name="number" placeholder="Number" id="contact">
+    <input class="w3-input w3-padding-16 w3-border" type="email" name="emails" placeholder="Email" id="email">
 
-      <div>
-        <select class="w3-input w3-padding-16 w3-border" required name="Gender" id="gender" onchange="showGenderSelection()">
-          <option value="">Gender</option>
+    <!-- <textarea class="w3-input w3-padding-16 w3-border" name="message" rows="7" placeholder="Your Message"></textarea> -->
+    
+    <div class="w3-content" style="margin-bottom: 16px;">
+      <select class="w3-input w3-padding-16 w3-border" required name="Gender" id="gender" onchange="handleGenderSelection()">
+          <option value="">Select Gender</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
-        </select>
-      </div>
-      
-      <div>
-        <select class="w3-input w3-padding-16 w3-border" required name="Domain" id="domain" onchange="showGameSelection()">
-          <option value="">Domain</option>
-          <option value="Flagship">Flagship</option>
-          <option value="E-Sports">E-Sports</option>
-        </select>
-      </div>
-
-      <!-- Hidden Game Selection -->
-      <div id="gameSelection" style="display: none;">
-        <select class="w3-input w3-padding-16 w3-border" required name="Game" id="game">
-            <!-- Game options will appear based on the selected domain -->
-        </select>
-      </div>
-
-      <p><button class="w3-button w3-orange w3-round" type="submit"><b>SUBMIT</b></button></p> 
-    </form>
-
-
-    <!-- Payment Section (Initially Hidden) -->
-    <div id="paymentSection" style="display: none;">
-      <form method="post" id="registrationForm" name="registrationForm" action="">
-        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">PAYMENT</span></h5>
-        <div class="w3-center">
-          <img src="assets/images_main/qr_code.png" alt="QR Code for Payment" id="qrCode">
-        </div>
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Account Holder Name" required name="AccountHolder" id="AccountHolder"></p>
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Transaction ID" required name="TransactionID" id="transactionID"></p>
-        <p><button class="w3-button w3-orange w3-round" type="button" onclick="submitPayment()"><b>PAYMENT DONE!</b></button></p> 
-      </form>
+      </select>
     </div>
 
+    <p id="freeMessage" style="display: none; color: green; font-weight: bold;">Registration is FREE for Female participants!</p>
 
 
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>    
-    <p>Find Us on Google Maps</p>
-    <div id="map-container">
-      <iframe id="map-large" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d445.015249954718!2d75.650107!3d26.8360717!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4af4fe68f403%3A0x3bf05f95df22b8c4!2sJK%20Lakshmipat%20University!5e0!3m2!1sen!2sin!4v1736832523274!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <iframe id="map-small" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448.1257408283488!2d75.65006729329693!3d26.83659911734717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4af4fe68f403%3A0x3bf05f95df22b8c4!2sJK%20Lakshmipat%20University!5e0!3m2!1sen!2sin!4v1737557501455!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <input class="w3-input w3-padding-16 w3-border" type="text" placeholder="University Name" id="university" required name="College"></p>
+    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="State" required name="State"></p>
+    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="City" id="city" required name="City">
+
+    <div >
+      <select class="w3-input w3-padding-16 w3-border" required name="Domain" id="domain" onchange="showGameSelection()">
+        <option value="">Domain</option>
+        <option value="Flagship">Flagship</option>
+        <option value="Open">Open</option>
+        <option value="E-Sports">E-Sports</option>
+      </select>
     </div>
+
+    <!-- Hidden Game Selection -->
+     <!-- Game options will appear based on the selected domain -->
+     <div id="gameSelection" style="display: none;">
+      <select class="w3-input w3-padding-16 w3-border" required name="Game" id="game">
+      </select>
+    </div>
+
+    <!-- Payment Details (Hidden for Females) -->
+    <div id="paymentDetails">
+      <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide">PAYMENT DETAILS</span></h5>
+      <div class="w3-center"> <img src="assets/images_main/qr_code.png" alt="QR Code for Payment" id="qrCode"></div>
+      <h6 class="w3-center w3-padding-16"><span class="w3-tag w3-wide">Pay INR 200/- to register!</span></h6>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Account Holder Name" required name="AccountHolder" id="AccountHolder"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Transaction ID" required name="TransactionID" id="transactionID"></p>
   </div>
+
+    <!-- Hidden Game Selection -->
+     <!-- Game options will appear based on the selected domain -->
+     <!-- <div class="w3-content" style="margin-bottom: 16px;">
+      <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide">PAYMENT DETAILS</span></h5>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Account Holder Name" required name="AccountHolder" id="AccountHolder"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Transaction ID" required name="TransactionID" id="transactionID"></p>
+      </div> -->
+    
+
+      <!-- <input type="submit" value="Submit" id="submit"> -->
+      <p><button class="w3-button w3-orange w3-round" type="submit" onclick="sendMail()"><b>SUBMIT</b></button></p>
+  </form>
+
+  <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>    
+  <p>Find Us on Google Maps</p>
+  <div id="map-container">
+    <iframe id="map-large" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d445.015249954718!2d75.650107!3d26.8360717!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4af4fe68f403%3A0x3bf05f95df22b8c4!2sJK%20Lakshmipat%20University!5e0!3m2!1sen!2sin!4v1736832523274!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe id="map-small" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448.1257408283488!2d75.65006729329693!3d26.83659911734717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4af4fe68f403%3A0x3bf05f95df22b8c4!2sJK%20Lakshmipat%20University!5e0!3m2!1sen!2sin!4v1737557501455!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
 </div>
+</div>
+
+
+
+
 
 
 

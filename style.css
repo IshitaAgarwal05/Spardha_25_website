@@ -81,6 +81,13 @@ body, html {
   margin-top: 40px;
 }
 
+/* For screens with width less than 566px */
+@media (max-width: 566px) {
+  .bgimg {
+    min-height: 100%;  /* Adjust the minimum height based on your preference */
+  }
+}
+
 .countdown-container {
     position: relative;
     padding: 120px 20px;
@@ -228,9 +235,6 @@ h1 {
     /* padding-bottom: 80px; */
 }
 
-.qrcode img {
-  transform: scale(1.5);
-}
 
 
 
@@ -506,6 +510,15 @@ h1 {
 
   .tablink {
     font-size: 12px;
+  }
+
+  .slide img {
+    transform: scale(0.9);
+  }
+
+  .slider::before,
+  .slider::after {
+    width: 80px;
   }
 
   .footer-center img {
@@ -815,30 +828,36 @@ h1 {
 }
 
 #ball,
-#bat{
+#bat {
     position: absolute;
 }
 
+/* Responsive Ball */
 #ball {
-    width: 25px;
-    height: 25px;
-    left: 46%;
-    top:  53%;
+    width: 5vw;  /* Relative to viewport width */
+    height: 5vw; /* Maintain aspect ratio */
+    min-width: 20px;  /* Ensuring it's not too small */
+    min-height: 20px;
+    max-width: 25px;  /* Prevents it from getting too large */
+    max-height: 25px;
+    left: 47%;
+    top:  51%;
     z-index: 2;
     animation: bounceBall 1s infinite;
     animation-delay: 1s;
 }
 
+/* Responsive Bat */
 #bat {
-    width: 10%;
-    /* top: 0;
-    left: 0; */
+    width: 10vw;  /* Relative to viewport width */
+    min-width: 60px;  /* Ensuring visibility on smaller screens */
+    max-width: 100px; /* Prevents excessive scaling */
     z-index: 1;
     transform: rotateX(-40deg);
     animation: moveBat 1s infinite;
 }
 
-/* bounce animation snippet from animate.css library with some changes */
+/* Bounce animation for the ball */
 @keyframes bounceBall {
     from,
     20%,
@@ -852,20 +871,21 @@ h1 {
     40%,
     43% {
         animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-        transform: translate3d(0, -60px, 0);
+        transform: translate3d(0, -8vh, 0); /* Uses viewport height for responsiveness */
     }
 
     70% {
-        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-        transform: translate3d(0, -30px, 0);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -4vh, 0);
     }
 
     90% {
-        transform: translate3d(0, -8px, 0);
+        transform: translate3d(0, -1vh, 0);
     }
-    }
+}
 
-    @keyframes moveBat {
+/* Bat Swing Animation */
+@keyframes moveBat {
     0% {
         transform: rotateX(0deg);
     }
@@ -878,7 +898,8 @@ h1 {
         transform: rotateX(0deg);
     }
 }
-/* Bat Swing Animation */
+
+/* Bat Swing */
 @keyframes swingBat {
   0%, 100% {
       transform: rotate(-10deg);
@@ -886,4 +907,21 @@ h1 {
   50% {
       transform: rotate(10deg);
   }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 800px) {
+    #ball {
+        width: 2vw; 
+        height: 2vw;
+        min-width: 15px; /* Adjust for very small screens */
+        min-height: 15px;
+        left: 44%;
+        top:  51%;
+    }
+
+    #bat {
+        width: 12vw; 
+        min-width: 50px;
+    }
 }
