@@ -13,6 +13,9 @@ window.addEventListener("load", function () {
   setTimeout(() => {loader.style.display = "none";}, 3000);
 });
 
+
+
+
 // scroll countdown numbers
 function startCountdownAnimation(id, finalValue) {
   const element = document.getElementById(id);
