@@ -170,61 +170,71 @@
 
 
 <!-- Events Container -->
-<div class="w3-container" id="Events">
-  <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">EVENTS</span></h5>
-
-    <div class="tablinks-container">
-      <div onclick="openEvents(event, 'Flagship');" id="myLink" class="tablink">Flagship</div>
-      <!-- <div onclick="openEvents(event, 'Open');" class="tablink">Open</div> -->
-      <div onclick="openEvents(event, 'E-Sports');" class="tablink">E-Sports</div>
-    </div>    
-
-    <div id="Flagship" class="w3-container Events w3-padding-48 w3-card">
-      <h5>Cricket</h5>
-      <p class="w3-text-grey">Cricket Ground</p><br>
-    
-      <h5>Volleyball</h5>
-      <p class="w3-text-grey">Volleyball Court</p><br>
-    
-      <h5>Badminton</h5>
-      <p class="w3-text-grey">Badminton Court</p><br>
-    
-      <h5>Basketball</h5>
-      <p class="w3-text-grey">Basketball Court</p><br>
-
-      <h5>Futsal Football</h5>
-      <p class="w3-text-grey">Football Ground</p><br>
-
-      <h5>7-a-side Football</h5>
-      <p class="w3-text-grey">Football Ground</p><br>
-    
-      <h5>Table Tennis</h5>
-      <p class="w3-text-grey">Boys Hostel - 2</p><br>
+<div class="container">
+  <div class="events-container">
+    <h2 class="team-heading">Events</h2>
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active" data-target="flagship">Flagship</div>
+        <div class="tab" data-target="esports">E-Sports</div>
     </div>
 
-    <!-- <div id="Open" class="w3-container Events w3-padding-48 w3-card">
-      <h5>Kabaddi</h5>
-      <p class="w3-text-grey">Regular coffee 2.50</p><br>
-    
-      <h5>Crossfit</h5>
-      <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
-    
-      <h5>Athletics</h5>
-      <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
-    
-      <h5>Chess</h5>
-      <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
-    </div>   -->
+    <!-- Event Content -->
+    <div class="events-content">
+        <!-- Flagship Events -->
+        <div class="event-list active" id="flagship">
+            <div class="event-card">
+                <i class="fas fa-baseball-ball"></i>
+                <h4>Cricket</h4>
+                <p>Cricket Ground</p>
+            </div>
+            <div class="event-card">
+                <i class="fas fa-volleyball-ball"></i>
+                <h4>Volleyball</h4>
+                <p>Volleyball Court</p>
+            </div>
+            <div class="event-card">
+                <i class="fas fa-table-tennis"></i>
+                <h4>Table Tennis</h4>
+                <p>Boys Hostel - 2</p>
+            </div>
+            <div class="event-card">
+              <i class="fas fa-table-tennis"></i>
+              <h4>Badminton</h4>
+              <p>Badminton Court</p>
+            </div>
+            <div class="event-card">
+                <i class="fas fa-futbol"></i>
+                <h4>Futsal Football</h4>
+                <p>Football Ground</p>
+            </div>
+            <div class="event-card">
+              <i class="fas fa-futbol"></i>
+              <h4>7-a-side Football</h4>
+              <p>Football Ground</p>
+            </div>
+            <div class="event-card">
+              <i class="fas fa-futbol"></i>
+              <h4>Basketball</h4>
+              <p>Basketball Court</p>
+            </div>
+        </div>
 
-    <div id="E-Sports" class="w3-container Events w3-padding-48 w3-card">
-      <h5>BGMI</h5>
-      <p class="w3-text-grey">IM Amphitheatre</p><br>
-    </div>  
-    
-    <!-- Button to open the rulebook -->
-    <div class="w3-center" style="padding-top: 20px; padding-bottom: 20px;">
-      <button class="w3-button w3-orange w3-round" onclick="openRulebook()"><strong>Rulebook</strong></button>
+        <!-- E-Sports Events -->
+        <div class="event-list" id="esports">
+            <div class="event-card">
+              <div class="grid-item bgmi">
+                <i class="fas fa-gamepad"></i>
+                  <h4>BGMI</h4>
+                  <p>IM Amphitheatre</p>
+              </div>
+            </div>
+        </div>  
+      
+      <!-- Button to open the rulebook -->
+      <div class="w3-center" style="padding-top: 20px; padding-bottom: 10px;">
+        <button class="w3-button w3-orange w3-round" onclick="openRulebook()"><strong>Rulebook</strong></button>
+      </div>
     </div>
   </div>
 </div>
@@ -270,35 +280,28 @@
       <select class="w3-input w3-padding-16 w3-border" required name="Domain" id="domain" onchange="showGameSelection()">
         <option value="">Domain</option>
         <option value="Flagship">Flagship</option>
-        <option value="Open">Open</option>
         <option value="E-Sports">E-Sports</option>
       </select>
     </div>
 
     <!-- Hidden Game Selection -->
-     <!-- Game options will appear based on the selected domain -->
-     <div id="gameSelection" style="display: none;">
+    <!-- Game options will appear based on the selected domain -->
+    <div id="gameSelection" style="display: none;">
       <select class="w3-input w3-padding-16 w3-border" required name="Game" id="game">
       </select>
     </div>
 
     <!-- Payment Details (Hidden for Females) -->
     <div id="paymentDetails">
-      <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide">PAYMENT DETAILS</span></h5>
-      <div class="w3-center"> <img src="assets/images_main/qr_code.png" alt="QR Code for Payment" id="qrCode"></div>
-      <h6 class="w3-center w3-padding-16"><span class="w3-tag w3-wide">Pay INR 200/- to register!</span></h6>
+      <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide">
+        <br>PAYMENT DETAILS <br><br>
+        <div class="w3-center"> <img src="assets/images_main/qr_code.png" alt="QR Code for Payment" id="qrCode"></div>
+        <br>Pay INR 200/- to register!
+        <br>                    .                    
+      </span></h5>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Account Holder Name" required name="AccountHolder" id="AccountHolder"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Transaction ID" required name="TransactionID" id="transactionID"></p>
   </div>
-
-    <!-- Hidden Game Selection -->
-     <!-- Game options will appear based on the selected domain -->
-     <!-- <div class="w3-content" style="margin-bottom: 16px;">
-      <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide">PAYMENT DETAILS</span></h5>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Account Holder Name" required name="AccountHolder" id="AccountHolder"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Transaction ID" required name="TransactionID" id="transactionID"></p>
-      </div> -->
-    
 
       <!-- <input type="submit" value="Submit" id="submit"> -->
       <p><button class="w3-button w3-orange w3-round" type="submit" onclick="sendMail()"><b>SUBMIT</b></button></p>

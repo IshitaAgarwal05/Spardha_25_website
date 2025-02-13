@@ -66,25 +66,27 @@ window.onload = initializeCountdown;
 
 
 // Events table functioning
-function openEvents(evt, eventName) {
-  var i, eventSections, tablinks;
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".tab");
+  const eventLists = document.querySelectorAll(".event-list");
 
-  // Hide all event sections
-  eventSections = document.getElementsByClassName("Events");
-  for (i = 0; i < eventSections.length; i++) {
-      eventSections[i].style.display = "none";
-  }
+  tabs.forEach(tab => {
+      tab.addEventListener("click", function () {
+          // Remove active class from all tabs
+          tabs.forEach(t => t.classList.remove("active"));
+          this.classList.add("active");
 
-  // Remove the active class from all tabs
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].classList.remove("active");
-  }
-
-  document.getElementById(eventName).style.display = "block";
-  evt.currentTarget.classList.add("active");
-}
-document.getElementById("myLink").click();
+          // Show the correct event list
+          const target = this.getAttribute("data-target");
+          eventLists.forEach(list => {
+              list.classList.remove("active");
+              if (list.id === target) {
+                  list.classList.add("active");
+              }
+          });
+      });
+  });
+});
 
 
 
@@ -144,19 +146,6 @@ function updateCountdown() {
   }
 }
 setInterval(updateCountdown, 1000);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

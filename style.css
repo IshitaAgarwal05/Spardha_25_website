@@ -48,7 +48,7 @@ body, html {
 }
 
 /* Responsive Design for Large Screens: Keep Original Layout */
-@media screen and (min-width: 515px) {
+@media screen and (min-width: 516px) {
   #mobileMenu {
     display: flex !important; /* Ensure menu stays open on big screens */
     justify-content: space-around;
@@ -81,10 +81,25 @@ body, html {
   margin-top: 40px;
 }
 
-/* For screens with width less than 566px */
-@media (max-width: 566px) {
+/* For screens with width less than 825px */
+@media (max-width: 800px) {
   .bgimg {
-    min-height: 100%;  /* Adjust the minimum height based on your preference */
+    min-height: 140%;
+  }
+}
+@media (max-width: 625px) {
+  .bgimg {
+    min-height: 120%;
+  }
+}
+@media (max-width: 548px) {
+  .bgimg {
+    min-height: 100%;
+  }
+}
+@media (max-width: 452px) {
+  .bgimg {
+    min-height: 80%;
   }
 }
 
@@ -171,77 +186,151 @@ body, html {
   animation: none !important; /* Stop the animation when the final value is set */
 }
 
+
+
+
+
+
+
+.events-container {
+  width: 90%;
+  max-width: 600px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  /* Centering */
+  margin: 0px auto;  /* Auto for left & right margins centers it */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
+  padding: 20px 0;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  background: #d1c5b0;
+  border-radius: 10px;
+  width: 97%;
+}
+
+.tab {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+  max-width: 50%;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.tab.active {
+  background: #f18c29;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.events-content {
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+/* Event List */
+.event-list {
+  display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.event-list.active {
+  display: flex;
+}
+
+.event-card {
+  flex: 1 1 calc(50% - 10px);
+  background: #fafafa;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: medium;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-card i {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #8b725e;
+}
+
+.event-card h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.event-card p {
+  font-size: 12px;
+  color: #777;
+}
+
+.bgmi {
+  flex: 1 1 100%;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
 h1 {
-    font-size: 48px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    color: orange;
-    text-transform: uppercase;
+  font-size: 48px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: orange;
+  text-transform: uppercase;
 } 
 
 #about {
-  background-color: black;
-  color: white;
-  padding-top: 30px;
-  padding-bottom: 80px;
+background-color: black;
+color: white;
+padding-top: 30px;
+padding-bottom: 80px;
 }
 
 @media screen and (max-width: 100%) {
   #about .w3-content > div {
       flex-direction: column;
   }
-  
+
   #about .w3-content > div > div:first-child {
       width: 100%;
       margin-bottom: 2rem;
   }
 }
-
-.Events {
-  display: none;
-  background-color: black;
-  color: rgb(224, 224, 224);
-  margin-bottom: 30px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 8px; 
-}
-
-.tablinks-container {
-  display: flex;
-  justify-content: space-around; /* Distributes the items evenly */
-  align-items: center; /* Centers the text vertically */
-  background-color: rgb(224, 224, 224); /* Matches the black theme */
-  padding: 10px 0;
-}
-
-.tablink {
-  flex: 1; /* Makes each tab take up equal space */
-  text-align: center; /* Centers the text in each tab */
-  color: black;
-  cursor: pointer;
-  padding: 10px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  border-radius: 8px 8px 0 0; 
-  background-color: rgb(211, 211, 211);
-}
-
-/* Add shadow to tables */
-.w3-container.Events {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Whitish-grey shadow */
-    background-color: white; /* Ensure table background is white */
-    border-radius: 8px; /* Optional: Rounded corners for aesthetic */
-    /* padding-bottom: 80px; */
-}
-
-
-
-
-
-
-
-
 
 /* About Content - Default: Side-by-Side Layout */
 .about-content {
@@ -477,6 +566,12 @@ h1 {
   }
 }
 
+@media (max-width: 625px) {
+  .countdown-container {
+    padding: 15px;
+  }
+}
+
 @media (max-width: 480px) {
   .w3-button.w3-block.w3-black {
     margin-left: 2px;
@@ -489,7 +584,7 @@ h1 {
   }
 
   .countdown-container {
-    padding: 20px;
+    padding: 12px;
   }
 
   h1 {
@@ -531,26 +626,9 @@ h1 {
   }
 }
 
-/* Active tab styling */
-.tablink.active {
-    background-color: #ff8d1c; /* Orange matching the theme */
-    color: white; /* White text for better contrast */
-}
 
-/* Hover effect remains */
-.tablink:hover {
-    background-color: #a8a7a7; /* Subtle grey hover */
-}
 
-.tablink.w3-dark-grey {
-  color: black; /* Active tab text */
-}
 
-/* Change sports names color */
-.Events h5 {
-    color: #ff8d1c; 
-    font-weight: bold; 
-}
 
 
 /* Style for the rulebook button */
@@ -563,10 +641,6 @@ h1 {
     cursor: pointer;
 }
 
-.w3-button.w3-orange:hover {
-    background-color: #e67e22; /* Slightly darker shade on hover */
-}
-
 .w3-button.w3-round {
     border-radius: 8px; /* Rounded corners */
 }
@@ -574,6 +648,8 @@ h1 {
 .w3-center img{
   height: 180px;
 }
+
+
 
 
 
@@ -711,7 +787,7 @@ h1 {
 
 
 /* Sponsors Section */
-.sponsors-section {
+/* .sponsors-section {
   background: white;
   color: black;
   padding: 40px 20px;
@@ -732,13 +808,13 @@ h1 {
 
 .sponsor-track {
   display: flex;
-  transition: transform 0.3s ease-in-out;
-  width: calc(300%); /* Make it wide enough for all slides */
-}
+  transition: transform 0.3s ease-in-out; */
+  /* width: calc(300%); /* Make it wide enough for all slides */
+/* }
 
-.sponsor {
-  flex: 0 0 calc(100% / 10); /* Show 3 logos at a time */
-  display: flex;
+.sponsor { */
+  /*flex: 0 0 calc(100% / 10); /* Show 3 logos at a time */
+  /* display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -748,12 +824,21 @@ h1 {
   max-width: 100%;
   max-height: 100px;
   object-fit: contain;
-}
+} */
 
 /* Optional: Add space between sponsor logos */
-.sponsor:not(:last-child) {
+/* .sponsor:not(:last-child) {
   margin-right: 20px;
-}
+} */
+
+
+
+
+
+
+
+
+
 
 /* Meet the Team Section */
 .meet-the-team {
@@ -811,6 +896,10 @@ h1 {
   color: #ccc;
   margin-bottom: 10px;
 }
+
+
+
+
 
 
 
