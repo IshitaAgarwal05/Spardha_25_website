@@ -276,18 +276,27 @@
     <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="State" required name="State"></p>
     <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="City" id="city" required name="City">
 
-    <div >
+    <!-- <div >
       <select class="w3-input w3-padding-16 w3-border" required name="Domain" id="domain" onchange="showGameSelection()">
         <option value="">Domain</option>
         <option value="Flagship">Flagship</option>
         <option value="E-Sports">E-Sports</option>
       </select>
-    </div>
+    </div> -->
 
     <!-- Hidden Game Selection -->
     <!-- Game options will appear based on the selected domain -->
-    <div id="gameSelection" style="display: none;">
+    <div id="gameSelection">
       <select class="w3-input w3-padding-16 w3-border" required name="Game" id="game">
+          <option value="">Select Game</option>
+          <option value="Cricket">Cricket</option>
+          <option value="Volleyball">Volleyball</option>
+          <option value="Basketball">Basketball</option>
+          <option value="Futsal Football">Futsal Football</option>
+          <option value="7-a-side Football">7-a-side Football</option>
+          <option value="Badminton">Badminton</option>
+          <option value="Table Tennis">Table Tennis</option>
+          <option value="BGMI">BGMI</option>
       </select>
     </div>
 
